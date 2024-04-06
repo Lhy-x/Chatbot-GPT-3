@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set, compatibility, and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Linking an external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Title of the HTML document -->
+    <title>My Chatbot</title>
+
+    <!-- Internal style for customizing textarea -->
+    <style>
+        textarea {
+            overflow: hidden;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main container with background -->
+    <div class="background">
+        <!-- Container for the chat interface -->
+        <div class="chat-container">
+            <!-- Header section of the chat -->
+            <div class="chat-header">
+                <!-- Heading with optional text centering -->
+                <h1 class="text-center"></h1>
+
+                <!-- Centered image within the header -->
+                <div class="center" id="center">
+                    <img src="assets/logo.png" />
+                </div>
+
+                <!-- Button to reset the chat with associated function -->
+                <button class="btn-reset" id="reset" onclick="resetChat()">
+                    <img
+                        id="resett"
+                        src="assets/header-button-icon.svg"
+                        alt=""
+                    />
+                </button>
+            </div>
+
+            <!-- Body of the chat containing messages -->
+            <div id="chat-body" class="chat-body">
+                <!-- Received message with chatbot image and text content -->
+                <div class="received message">
+                    <div class="imageText">
+                        <div class="incoming_msg_img">
+                            <img
+                                src="assets/chatbot.png"
+                                alt="agentpic"
+                            />
+                        </div>
+                        <div class="received_withd_msg"><p>Hello there! What question would you like to ask me today?</p></div>
+                    </div>
+                </div>
+
+                <!-- Additional messages can be added here -->
+            </div>
+
+            <!-- Footer section of the chat with textarea and send button -->
+            <div class="chat-footer">
+                <!-- Textarea for user input with auto-resize and cursor positioning functions -->
+                <textarea
+                    id="prompt"
+                    type="text"
+                    placeholder="Ask me the question of your choice."
+                    oninput="resizeTextarea(this, 100); moveCursorToEnd(this);"
+                ></textarea>
+
+                <!-- Button to send user input with associated function -->
+                <button id="send-button" onclick="sendPrompt()">
+                    <img src="assets/button_send.png" alt="backbutton" />
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- External script files for functionality -->
+<script src="script.js"></script>
+<script>
+    // Function to resize textarea based on content and a maximum height
+    function resizeTextarea(textarea, maxHeight) {
+        textarea.style.height = "";
+        if (textarea.scrollHeight > maxHeight) {
+            textarea.style.height = maxHeight + "px";
+        } else {
+            textarea.style.height = textarea.scrollHeight + "px";
+        }
+    }
+
+    // Function to move the cursor to the end of the textarea
+    function moveCursorToEnd(textarea) {
+        textarea.selectionStart = textarea.selectionEnd = textarea.value.length;
+    }
+</script>
+
+</html>

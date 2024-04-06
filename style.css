@@ -1,0 +1,322 @@
+/* Importing the Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap");
+
+/* Hiding Scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Background styling */
+.background {
+    background-image: url("assets/bg-image.png");
+    height: 90vh;
+    width: auto;
+    margin: 0;
+    padding: 5vh 0;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}
+
+/* Chat container styling */
+.chat-container {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background: linear-gradient(
+        114.48deg,
+        rgba(255, 255, 255, 0.24) 6.6%,
+        rgba(255, 255, 255, 0.2) 72.94%
+    );
+    background-blend-mode: hard-light;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7.5px);
+    border-radius: 25px;
+}
+
+/* Reset button styling */
+.btn-reset {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    background: linear-gradient(
+        114.48deg,
+        rgba(255, 255, 255, 0.15) 6.6%,
+        rgba(255, 255, 255, 0.15) 72.94%
+    );
+    background-blend-mode: hard-light;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(7.5px);
+    border-radius: 25px;
+}
+
+/* Chat header styling */
+.chat-header {
+    font-size: 12px;
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+    outline: inherit;
+    background-blend-mode: hard-light;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7.5px);
+    border-radius: 25px 25px 0px 0px;
+}
+
+/* Centered logo styling */
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#center img {
+    width: 80px;
+    margin-bottom: 0px !important;
+}
+
+/* Chat body styling */
+.chat-body {
+    flex-grow: 1;
+    height: 5000px;
+    padding: 10px;
+    overflow-y: scroll;
+    font: 36px;
+}
+
+/* Message container styling */
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Received message styling */
+.received {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sent message styling */
+.sent {
+    align-items: flex-end;
+}
+
+.sent.message p {
+    background-color: #742aff !important;
+    border-radius: 25px 25px 2px 25px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff;
+}
+
+/* Message text styling */
+.message p {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    color: #1b233d;
+    border-radius: 25px 25px 25px 0;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/* Time stamp styling */
+.time {
+    font-size: 36px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Chat footer styling */
+.chat-footer {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    background-blend-mode: hard-light;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(7.5px);
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    padding: 10px 20px;
+}
+
+/* Textarea styling in chat footer */
+.chat-footer textarea {
+    background: transparent;
+    flex-grow: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    resize: none !important;
+    height: 20px;
+    outline: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+/* Button styling in chat footer */
+.chat-footer button {
+    outline: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Reset button specific styling */
+#reset {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#resett {
+    width: 20px;
+    padding: 10px;
+}
+
+/* Styling for received messages */
+.received.message {
+    display: flex;
+    flex-direction: column;
+}
+
+.incoming_msg_img {
+    margin-right: 10px;
+    width: 30px;
+}
+
+/* Bot title styling */
+.bot-title {
+    margin-bottom: 2px;
+    margin-left: 44px;
+    font-size: 16px;
+}
+
+/* Styling for received message content */
+.received_withd_msg {
+    margin-bottom: 10px;
+}
+
+.received_withd_msg p {
+    margin: 0;
+}
+
+/* Styling for the image and text container in messages */
+.imageText {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* Styling for the send button's image */
+#send-button > img {
+    width: 40px;
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 700px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Scrollbar Styling for Mobile */
+    ::-webkit-scrollbar {
+        display: initial;
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    /* Adjustments for mobile background and padding */
+    .background {
+        background-image: url("assets/mobile-bg-img.png");
+        padding: 5vh 3vh;
+        background-size: cover;
+    }
+
+    /* Adjustments for mobile chat body height */
+    .chat-body {
+        height: auto;
+        max-height: 60vh;
+    }
+
+    /* Adjustments for mobile chat header padding */
+    .chat-header {
+        padding: 10px 15px;
+    }
+
+    /* Adjustments for mobile reset button image width */
+    #resett {
+        width: 15px;
+    }
+
+    /* Adjustments for mobile centered logo image width */
+    #center img {
+        width: 50px;
+    }
+
+    /* Adjustments for mobile sent and received message font size and line height */
+    .sent.message p,
+    .message p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    /* Adjustments for mobile image size in received messages */
+    .imageText {
+        gap: 0px;
+    }
+
+    .incoming_msg_img > img {
+        width: 20px;
+    }
+
+    /* Adjustments for mobile chat footer width and padding */
+    .chat-footer {
+        width: 90%;
+        padding: 10px;
+    }
+
+    /* Adjustments for mobile textarea height in chat footer */
+    .chat-footer textarea {
+        height: 40px;
+    }
+
+    /* Adjustments for mobile textarea placeholder color */
+    .chat-footer textarea::placeholder {
+        color: white !important;
+    }
+}
